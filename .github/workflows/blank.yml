@@ -29,10 +29,9 @@ jobs:
 
       - name: Version
         id: version
-        uses: shimsangwon/get-tag@v1.6
+        uses: shimsangwon/get-tag@v2.0
         with:
           version: ${{github.event.inputs.version}}
-          refs: $GITHUB_REF
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
