@@ -29,7 +29,7 @@ jobs:
 
       - name: Version
         id: version
-        uses: shimsangwon/get-tag@v1.4
+        uses: shimsangwon/get-tag@v1.5
         with:
           version: ${{github.event.inputs.version}}
           refs: ${{github.event.release.GITHUB_REF}}
