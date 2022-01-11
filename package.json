@@ -1,0 +1,8 @@
+{
+  "name": "github_action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:shimsangwon/github_action.git",
+  "author": "shimsangwon <sangwon.shim@powertask.biz>",
+  "license": "MIT"
+}
