@@ -32,7 +32,7 @@ jobs:
         uses: shimsangwon/get-tag@v1.5
         with:
           version: ${{github.event.inputs.version}}
-          refs: ${{github.event.release.GITHUB_REF}}
+          refs: ${{GITHUB_REF}}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
