@@ -34,10 +34,9 @@ jobs:
           version: ${{github.event.inputs.version}}
           refs: ${{github.event.release.GITHUB_REF}}
 
-
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world ${steps.version.output.version}!
+        run: echo Hello, world ${{steps.version.outputs.version}}!
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
