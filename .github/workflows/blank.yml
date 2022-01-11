@@ -27,14 +27,16 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
       - name: Version
         id: version
         uses: shimsangwon/get-tag@v3.0
         with:
           version: ${{github.event.inputs.version}}
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{steps.version.outputs.version}}
 
       - name: Log in to Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
