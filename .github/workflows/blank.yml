@@ -31,8 +31,8 @@ jobs:
         id: version
         uses: shimsangwon/get-tag@v1.4
         with:
-          version: ${github.event.inputs.version}
-          refs: ${GITHUB_REF}
+          version: ${{github.event.inputs.version}}
+          refs: ${{github.event.release.GITHUB_REF}}
 
 
       # Runs a single command using the runners shell
